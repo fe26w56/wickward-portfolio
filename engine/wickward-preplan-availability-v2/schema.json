@@ -1,0 +1,165 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:wickward:preplan-availability:v2",
+  "title": "Scheduled pre-day availability envelope",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "generic_request"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "wickward.preplan-availability.v2"
+    },
+    "generic_request": {
+      "type": "object",
+      "$comment": "Full strict generic-input.v1 validation is delegated to the source-locked runtime boundary; this schema defines only the new envelope."
+    },
+    "scheduled_availability": {
+      "type": "array",
+      "maxItems": 40,
+      "items": {
+        "$ref": "#/$defs/record"
+      }
+    },
+    "park_hours": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "received_at",
+        "issued_at",
+        "source",
+        "entry_start_at",
+        "exit_by"
+      ],
+      "properties": {
+        "source": {
+          "type": "string",
+          "minLength": 1
+        },
+        "received_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "issued_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "published_at": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "date-time"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "entry_start_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "exit_by": {
+          "type": "string",
+          "format": "date-time"
+        }
+      }
+    }
+  },
+  "$defs": {
+    "interval": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "start_at",
+        "end_at"
+      ],
+      "properties": {
+        "start_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "end_at": {
+          "type": "string",
+          "format": "date-time"
+        }
+      }
+    },
+    "record": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "attraction_id",
+        "received_at",
+        "issued_at",
+        "source"
+      ],
+      "anyOf": [
+        {
+          "required": [
+            "entry_windows"
+          ]
+        },
+        {
+          "required": [
+            "closed_intervals"
+          ]
+        },
+        {
+          "required": [
+            "finish_by"
+          ]
+        }
+      ],
+      "properties": {
+        "source": {
+          "type": "string",
+          "minLength": 1
+        },
+        "received_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "issued_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "published_at": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "date-time"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "attraction_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "entry_windows": {
+          "type": "array",
+          "maxItems": 64,
+          "items": {
+            "$ref": "#/$defs/interval"
+          }
+        },
+        "closed_intervals": {
+          "type": "array",
+          "maxItems": 64,
+          "items": {
+            "$ref": "#/$defs/interval"
+          }
+        },
+        "finish_by": {
+          "type": "string",
+          "format": "date-time"
+        }
+      }
+    }
+  }
+}

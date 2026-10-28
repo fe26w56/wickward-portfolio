@@ -1,0 +1,86 @@
+{
+  "format_version": 1,
+  "source_artifact": "wickward-next-ride-practical-study",
+  "verification_basis": "SOURCE_REFERENCES_v3.json and unchanged strict_input_v1/source_lock.json",
+  "runtime_imports_history_or_canonical_bridge": false,
+  "files": [
+    {
+      "path": "_vendor/data/prior/facility_crosswalk.json",
+      "source_relative_path": "data/prior/facility_crosswalk.json",
+      "sha256": "55dc956e0a16a8a177ce531b5e8695ca6d0076400b299c173273f2d40280dcb1",
+      "runtime_role": "inert_source_lock_reference"
+    },
+    {
+      "path": "_vendor/generic_io/__init__.py",
+      "source_relative_path": "generic_io/__init__.py",
+      "sha256": "5c419cf9c0f9ce356f1543a55015813284072e156b0f0622f998d71b60972466",
+      "runtime_role": "executed_unchanged_source"
+    },
+    {
+      "path": "_vendor/generic_io/adapter.py",
+      "source_relative_path": "generic_io/adapter.py",
+      "sha256": "8187e56489d5e1d5e746bcd0fd10472450cef291da75d0d686e2a9814ba7f8e1",
+      "runtime_role": "executed_unchanged_source"
+    },
+    {
+      "path": "_vendor/generic_io/recommendations.py",
+      "source_relative_path": "generic_io/recommendations.py",
+      "sha256": "b15a7ce6dc3a97f4ebf2b095d282b7cc825be34347c0a09f28be133ad5b1d82b",
+      "runtime_role": "executed_unchanged_source"
+    },
+    {
+      "path": "_vendor/integration_partial_recovery_v1/partial_recovery.py",
+      "source_relative_path": "integration_partial_recovery_v1/partial_recovery.py",
+      "sha256": "76fee47e7d72cb7eff00cc7b5b7c651c8a5cd24b38d199f5ad0785ebfa5105b7",
+      "runtime_role": "inert_source_lock_reference"
+    },
+    {
+      "path": "_vendor/integration_round1/common_bridge.py",
+      "source_relative_path": "integration_round1/common_bridge.py",
+      "sha256": "5c6de7edcc68c78008ada85af57fc4c8b8bc7db1591c6b4c1f2e54e2e528fe72",
+      "runtime_role": "inert_source_lock_reference"
+    },
+    {
+      "path": "_vendor/original_revision5/wickward-next-ride-prototype/wickward/engine.py",
+      "source_relative_path": "original_revision5/wickward-next-ride-prototype/wickward/engine.py",
+      "sha256": "8868c004a67fc57da51044590d0b71958ab5f012fbf1581fe86cd0394a96d613",
+      "runtime_role": "executed_unchanged_source"
+    },
+    {
+      "path": "_vendor/strict_input_v1/CLI_PROTOCOL.txt",
+      "source_relative_path": "strict_input_v1/CLI_PROTOCOL.txt",
+      "sha256": "f5aeedeb28625893427fbd66d09a966677bd32446f4c2ad61a8eef93215888c1",
+      "runtime_role": "inert_source_lock_reference"
+    },
+    {
+      "path": "_vendor/strict_input_v1/CONTRACT_PROPOSAL.txt",
+      "source_relative_path": "strict_input_v1/CONTRACT_PROPOSAL.txt",
+      "sha256": "6b4299e587a921eee97d2e3223e999da7fb165435daf72a1b0781c641b1a9799",
+      "runtime_role": "inert_source_lock_reference"
+    },
+    {
+      "path": "_vendor/strict_input_v1/RESOURCE_PROTOCOL.txt",
+      "source_relative_path": "strict_input_v1/RESOURCE_PROTOCOL.txt",
+      "sha256": "975be9f364657f6b4f35093b83f5c397b1317a6cfb386201c753cf2178a80905",
+      "runtime_role": "inert_source_lock_reference"
+    },
+    {
+      "path": "_vendor/strict_input_v1/schema.json",
+      "source_relative_path": "strict_input_v1/schema.json",
+      "sha256": "21fee55ffc166ba10cb9d59a6d4e3e68db109749002e5f052482b771f50672e4",
+      "runtime_role": "inert_source_lock_reference"
+    },
+    {
+      "path": "_vendor/strict_input_v1/source_lock.json",
+      "source_relative_path": "strict_input_v1/source_lock.json",
+      "sha256": "544d9f878a64d81e51db22672f2a42ef0b8c1c21e64c79bd23d892db78dac506",
+      "runtime_role": "inert_source_lock_reference"
+    },
+    {
+      "path": "_vendor/strict_input_v1/validation.py",
+      "source_relative_path": "strict_input_v1/validation.py",
+      "sha256": "0bc26e74d2f7b12a14e6b8e21c08a7a1d59afe7896896605f6ea33492e9660c4",
+      "runtime_role": "executed_unchanged_source"
+    }
+  ]
+}

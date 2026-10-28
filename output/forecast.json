@@ -1,0 +1,290 @@
+[
+  {
+    "attraction_id": "sky",
+    "issued_at": "2035-04-09T23:59:59+00:00",
+    "valid_from": "2035-04-10T09:00:00+00:00",
+    "valid_until": "2035-04-10T10:00:00+00:00",
+    "wait_minutes": 11.0,
+    "source": "synthetic seven-day hourly median; not the C1 model",
+    "scenario_id": "synthetic-week-median-v1"
+  },
+  {
+    "attraction_id": "sky",
+    "issued_at": "2035-04-09T23:59:59+00:00",
+    "valid_from": "2035-04-10T10:00:00+00:00",
+    "valid_until": "2035-04-10T11:00:00+00:00",
+    "wait_minutes": 16.0,
+    "source": "synthetic seven-day hourly median; not the C1 model",
+    "scenario_id": "synthetic-week-median-v1"
+  },
+  {
+    "attraction_id": "sky",
+    "issued_at": "2035-04-09T23:59:59+00:00",
+    "valid_from": "2035-04-10T11:00:00+00:00",
+    "valid_until": "2035-04-10T12:00:00+00:00",
+    "wait_minutes": 21.0,
+    "source": "synthetic seven-day hourly median; not the C1 model",
+    "scenario_id": "synthetic-week-median-v1"
+  },
+  {
+    "attraction_id": "sky",
+    "issued_at": "2035-04-09T23:59:59+00:00",
+    "valid_from": "2035-04-10T12:00:00+00:00",
+    "valid_until": "2035-04-10T13:00:00+00:00",
+    "wait_minutes": 26.0,
+    "source": "synthetic seven-day hourly median; not the C1 model",
+    "scenario_id": "synthetic-week-median-v1"
+  },
+  {
+    "attraction_id": "sky",
+    "issued_at": "2035-04-09T23:59:59+00:00",
+    "valid_from": "2035-04-10T13:00:00+00:00",
+    "valid_until": "2035-04-10T14:00:00+00:00",
+    "wait_minutes": 31.0,
+    "source": "synthetic seven-day hourly median; not the C1 model",
+    "scenario_id": "synthetic-week-median-v1"
+  },
+  {
+    "attraction_id": "sky",
+    "issued_at": "2035-04-09T23:59:59+00:00",
+    "valid_from": "2035-04-10T14:00:00+00:00",
+    "valid_until": "2035-04-10T15:00:00+00:00",
+    "wait_minutes": 36.0,
+    "source": "synthetic seven-day hourly median; not the C1 model",
+    "scenario_id": "synthetic-week-median-v1"
+  },
+  {
+    "attraction_id": "sky",
+    "issued_at": "2035-04-09T23:59:59+00:00",
+    "valid_from": "2035-04-10T15:00:00+00:00",
+    "valid_until": "2035-04-10T16:00:00+00:00",
+    "wait_minutes": 41.0,
+    "source": "synthetic seven-day hourly median; not the C1 model",
+    "scenario_id": "synthetic-week-median-v1"
+  },
+  {
+    "attraction_id": "sky",
+    "issued_at": "2035-04-09T23:59:59+00:00",
+    "valid_from": "2035-04-10T16:00:00+00:00",
+    "valid_until": "2035-04-10T17:00:00+00:00",
+    "wait_minutes": 46.0,
+    "source": "synthetic seven-day hourly median; not the C1 model",
+    "scenario_id": "synthetic-week-median-v1"
+  },
+  {
+    "attraction_id": "river",
+    "issued_at": "2035-04-09T23:59:59+00:00",
+    "valid_from": "2035-04-10T09:00:00+00:00",
+    "valid_until": "2035-04-10T10:00:00+00:00",
+    "wait_minutes": 21.0,
+    "source": "synthetic seven-day hourly median; not the C1 model",
+    "scenario_id": "synthetic-week-median-v1"
+  },
+  {
+    "attraction_id": "river",
+    "issued_at": "2035-04-09T23:59:59+00:00",
+    "valid_from": "2035-04-10T10:00:00+00:00",
+    "valid_until": "2035-04-10T11:00:00+00:00",
+    "wait_minutes": 26.0,
+    "source": "synthetic seven-day hourly median; not the C1 model",
+    "scenario_id": "synthetic-week-median-v1"
+  },
+  {
+    "attraction_id": "river",
+    "issued_at": "2035-04-09T23:59:59+00:00",
+    "valid_from": "2035-04-10T11:00:00+00:00",
+    "valid_until": "2035-04-10T12:00:00+00:00",
+    "wait_minutes": 31.0,
+    "source": "synthetic seven-day hourly median; not the C1 model",
+    "scenario_id": "synthetic-week-median-v1"
+  },
+  {
+    "attraction_id": "river",
+    "issued_at": "2035-04-09T23:59:59+00:00",
+    "valid_from": "2035-04-10T12:00:00+00:00",
+    "valid_until": "2035-04-10T13:00:00+00:00",
+    "wait_minutes": 36.0,
+    "source": "synthetic seven-day hourly median; not the C1 model",
+    "scenario_id": "synthetic-week-median-v1"
+  },
+  {
+    "attraction_id": "river",
+    "issued_at": "2035-04-09T23:59:59+00:00",
+    "valid_from": "2035-04-10T13:00:00+00:00",
+    "valid_until": "2035-04-10T14:00:00+00:00",
+    "wait_minutes": 41.0,
+    "source": "synthetic seven-day hourly median; not the C1 model",
+    "scenario_id": "synthetic-week-median-v1"
+  },
+  {
+    "attraction_id": "river",
+    "issued_at": "2035-04-09T23:59:59+00:00",
+    "valid_from": "2035-04-10T14:00:00+00:00",
+    "valid_until": "2035-04-10T15:00:00+00:00",
+    "wait_minutes": 46.0,
+    "source": "synthetic seven-day hourly median; not the C1 model",
+    "scenario_id": "synthetic-week-median-v1"
+  },
+  {
+    "attraction_id": "river",
+    "issued_at": "2035-04-09T23:59:59+00:00",
+    "valid_from": "2035-04-10T15:00:00+00:00",
+    "valid_until": "2035-04-10T16:00:00+00:00",
+    "wait_minutes": 11.0,
+    "source": "synthetic seven-day hourly median; not the C1 model",
+    "scenario_id": "synthetic-week-median-v1"
+  },
+  {
+    "attraction_id": "river",
+    "issued_at": "2035-04-09T23:59:59+00:00",
+    "valid_from": "2035-04-10T16:00:00+00:00",
+    "valid_until": "2035-04-10T17:00:00+00:00",
+    "wait_minutes": 16.0,
+    "source": "synthetic seven-day hourly median; not the C1 model",
+    "scenario_id": "synthetic-week-median-v1"
+  },
+  {
+    "attraction_id": "garden",
+    "issued_at": "2035-04-09T23:59:59+00:00",
+    "valid_from": "2035-04-10T09:00:00+00:00",
+    "valid_until": "2035-04-10T10:00:00+00:00",
+    "wait_minutes": 31.0,
+    "source": "synthetic seven-day hourly median; not the C1 model",
+    "scenario_id": "synthetic-week-median-v1"
+  },
+  {
+    "attraction_id": "garden",
+    "issued_at": "2035-04-09T23:59:59+00:00",
+    "valid_from": "2035-04-10T10:00:00+00:00",
+    "valid_until": "2035-04-10T11:00:00+00:00",
+    "wait_minutes": 36.0,
+    "source": "synthetic seven-day hourly median; not the C1 model",
+    "scenario_id": "synthetic-week-median-v1"
+  },
+  {
+    "attraction_id": "garden",
+    "issued_at": "2035-04-09T23:59:59+00:00",
+    "valid_from": "2035-04-10T11:00:00+00:00",
+    "valid_until": "2035-04-10T12:00:00+00:00",
+    "wait_minutes": 41.0,
+    "source": "synthetic seven-day hourly median; not the C1 model",
+    "scenario_id": "synthetic-week-median-v1"
+  },
+  {
+    "attraction_id": "garden",
+    "issued_at": "2035-04-09T23:59:59+00:00",
+    "valid_from": "2035-04-10T12:00:00+00:00",
+    "valid_until": "2035-04-10T13:00:00+00:00",
+    "wait_minutes": 46.0,
+    "source": "synthetic seven-day hourly median; not the C1 model",
+    "scenario_id": "synthetic-week-median-v1"
+  },
+  {
+    "attraction_id": "garden",
+    "issued_at": "2035-04-09T23:59:59+00:00",
+    "valid_from": "2035-04-10T13:00:00+00:00",
+    "valid_until": "2035-04-10T14:00:00+00:00",
+    "wait_minutes": 11.0,
+    "source": "synthetic seven-day hourly median; not the C1 model",
+    "scenario_id": "synthetic-week-median-v1"
+  },
+  {
+    "attraction_id": "garden",
+    "issued_at": "2035-04-09T23:59:59+00:00",
+    "valid_from": "2035-04-10T14:00:00+00:00",
+    "valid_until": "2035-04-10T15:00:00+00:00",
+    "wait_minutes": 16.0,
+    "source": "synthetic seven-day hourly median; not the C1 model",
+    "scenario_id": "synthetic-week-median-v1"
+  },
+  {
+    "attraction_id": "garden",
+    "issued_at": "2035-04-09T23:59:59+00:00",
+    "valid_from": "2035-04-10T15:00:00+00:00",
+    "valid_until": "2035-04-10T16:00:00+00:00",
+    "wait_minutes": 21.0,
+    "source": "synthetic seven-day hourly median; not the C1 model",
+    "scenario_id": "synthetic-week-median-v1"
+  },
+  {
+    "attraction_id": "garden",
+    "issued_at": "2035-04-09T23:59:59+00:00",
+    "valid_from": "2035-04-10T16:00:00+00:00",
+    "valid_until": "2035-04-10T17:00:00+00:00",
+    "wait_minutes": 26.0,
+    "source": "synthetic seven-day hourly median; not the C1 model",
+    "scenario_id": "synthetic-week-median-v1"
+  },
+  {
+    "attraction_id": "lights",
+    "issued_at": "2035-04-09T23:59:59+00:00",
+    "valid_from": "2035-04-10T09:00:00+00:00",
+    "valid_until": "2035-04-10T10:00:00+00:00",
+    "wait_minutes": 41.0,
+    "source": "synthetic seven-day hourly median; not the C1 model",
+    "scenario_id": "synthetic-week-median-v1"
+  },
+  {
+    "attraction_id": "lights",
+    "issued_at": "2035-04-09T23:59:59+00:00",
+    "valid_from": "2035-04-10T10:00:00+00:00",
+    "valid_until": "2035-04-10T11:00:00+00:00",
+    "wait_minutes": 46.0,
+    "source": "synthetic seven-day hourly median; not the C1 model",
+    "scenario_id": "synthetic-week-median-v1"
+  },
+  {
+    "attraction_id": "lights",
+    "issued_at": "2035-04-09T23:59:59+00:00",
+    "valid_from": "2035-04-10T11:00:00+00:00",
+    "valid_until": "2035-04-10T12:00:00+00:00",
+    "wait_minutes": 11.0,
+    "source": "synthetic seven-day hourly median; not the C1 model",
+    "scenario_id": "synthetic-week-median-v1"
+  },
+  {
+    "attraction_id": "lights",
+    "issued_at": "2035-04-09T23:59:59+00:00",
+    "valid_from": "2035-04-10T12:00:00+00:00",
+    "valid_until": "2035-04-10T13:00:00+00:00",
+    "wait_minutes": 16.0,
+    "source": "synthetic seven-day hourly median; not the C1 model",
+    "scenario_id": "synthetic-week-median-v1"
+  },
+  {
+    "attraction_id": "lights",
+    "issued_at": "2035-04-09T23:59:59+00:00",
+    "valid_from": "2035-04-10T13:00:00+00:00",
+    "valid_until": "2035-04-10T14:00:00+00:00",
+    "wait_minutes": 21.0,
+    "source": "synthetic seven-day hourly median; not the C1 model",
+    "scenario_id": "synthetic-week-median-v1"
+  },
+  {
+    "attraction_id": "lights",
+    "issued_at": "2035-04-09T23:59:59+00:00",
+    "valid_from": "2035-04-10T14:00:00+00:00",
+    "valid_until": "2035-04-10T15:00:00+00:00",
+    "wait_minutes": 26.0,
+    "source": "synthetic seven-day hourly median; not the C1 model",
+    "scenario_id": "synthetic-week-median-v1"
+  },
+  {
+    "attraction_id": "lights",
+    "issued_at": "2035-04-09T23:59:59+00:00",
+    "valid_from": "2035-04-10T15:00:00+00:00",
+    "valid_until": "2035-04-10T16:00:00+00:00",
+    "wait_minutes": 31.0,
+    "source": "synthetic seven-day hourly median; not the C1 model",
+    "scenario_id": "synthetic-week-median-v1"
+  },
+  {
+    "attraction_id": "lights",
+    "issued_at": "2035-04-09T23:59:59+00:00",
+    "valid_from": "2035-04-10T16:00:00+00:00",
+    "valid_until": "2035-04-10T17:00:00+00:00",
+    "wait_minutes": 36.0,
+    "source": "synthetic seven-day hourly median; not the C1 model",
+    "scenario_id": "synthetic-week-median-v1"
+  }
+]

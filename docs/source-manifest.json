@@ -1,0 +1,237 @@
+{
+  "source_repository": "wickward",
+  "source_tree_sha": "677c580fc5a86136cf1ab487ecf5aa54d7f0af13",
+  "files": [
+    {
+      "path": "engine/wickward-preplan-availability-v2/preplan_availability.py",
+      "source_path": "vendor/source-import/wickward-preplan-availability-v2/preplan_availability.py",
+      "source_sha256": "90375dff1c69434f50464b521d444b6d7fb23039d8dbb1ec32b1e11c6720597a",
+      "published_sha256": "90375dff1c69434f50464b521d444b6d7fb23039d8dbb1ec32b1e11c6720597a",
+      "unchanged": true
+    },
+    {
+      "path": "engine/wickward-preplan-availability-v2/schema.json",
+      "source_path": "vendor/source-import/wickward-preplan-availability-v2/schema.json",
+      "source_sha256": "05ff3960d40467002593a146d608efe80ec3182243cbae962aabb01241ade7db",
+      "published_sha256": "05ff3960d40467002593a146d608efe80ec3182243cbae962aabb01241ade7db",
+      "unchanged": true
+    },
+    {
+      "path": "engine/wickward-preplan-duration-input-v1/test_duration_input.py",
+      "source_path": "vendor/source-import/wickward-preplan-duration-input-v1/test_duration_input.py",
+      "source_sha256": "b52a71f02e1eaecd98ea0a6abf1a46625cfd3b152bf19849ce0be799a6a49909",
+      "published_sha256": "b52a71f02e1eaecd98ea0a6abf1a46625cfd3b152bf19849ce0be799a6a49909",
+      "unchanged": true
+    },
+    {
+      "path": "engine/wickward-preplan-duration-input-v1/schema.json",
+      "source_path": "vendor/source-import/wickward-preplan-duration-input-v1/schema.json",
+      "source_sha256": "6fb7594f7cae4a7b21a1da5683c4798130ad93fab7504f08008454e7d8729473",
+      "published_sha256": "6fb7594f7cae4a7b21a1da5683c4798130ad93fab7504f08008454e7d8729473",
+      "unchanged": true
+    },
+    {
+      "path": "engine/wickward-preplan-duration-input-v1/duration_input.py",
+      "source_path": "vendor/source-import/wickward-preplan-duration-input-v1/duration_input.py",
+      "source_sha256": "d09b57a0982854c8a031c08ab91f7574dc0b030a5e825122df7e6c85b8523455",
+      "published_sha256": "d09b57a0982854c8a031c08ab91f7574dc0b030a5e825122df7e6c85b8523455",
+      "unchanged": true
+    },
+    {
+      "path": "engine/wickward-preplan-handoff-v1/preplan_handoff.py",
+      "source_path": "vendor/source-import/wickward-preplan-handoff-v1/preplan_handoff.py",
+      "source_sha256": "adfa65e9fe7eb741ed4b433b39175ef4a6879131798dd23c5b6f0446298e6a39",
+      "published_sha256": "adfa65e9fe7eb741ed4b433b39175ef4a6879131798dd23c5b6f0446298e6a39",
+      "unchanged": true
+    },
+    {
+      "path": "engine/wickward-preplan-handoff-v1/VENDORED_SOURCES.json",
+      "source_path": "vendor/source-import/wickward-preplan-handoff-v1/VENDORED_SOURCES.json",
+      "source_sha256": "a14b10334ebf701140a7f52986c635239a56591036c06abb6e8466ebf0e6b5bd",
+      "published_sha256": "a14b10334ebf701140a7f52986c635239a56591036c06abb6e8466ebf0e6b5bd",
+      "unchanged": true
+    },
+    {
+      "path": "engine/wickward-unified-navigation-runtime-v3-ff1/unified_navigation_v3/engine.py",
+      "source_path": "vendor/source-import/wickward-unified-navigation-runtime-v3-ff1/unified_navigation_v3/engine.py",
+      "source_sha256": "23ad9d9068fcec09872e4ff79663a57c6478d43ebd74abf7f8cdc91b00615dd0",
+      "published_sha256": "23ad9d9068fcec09872e4ff79663a57c6478d43ebd74abf7f8cdc91b00615dd0",
+      "unchanged": true
+    },
+    {
+      "path": "engine/wickward-unified-navigation-runtime-v3-ff1/unified_navigation_v3/wait_guard.py",
+      "source_path": "vendor/source-import/wickward-unified-navigation-runtime-v3-ff1/unified_navigation_v3/wait_guard.py",
+      "source_sha256": "e9ba8aac9a75e4848fff5302b236e87529d9c44de6b9f51d8feb0f97b5ec968c",
+      "published_sha256": "e9ba8aac9a75e4848fff5302b236e87529d9c44de6b9f51d8feb0f97b5ec968c",
+      "unchanged": true
+    },
+    {
+      "path": "engine/wickward-unified-navigation-runtime-v3-ff1/unified_navigation_v3/context.py",
+      "source_path": "vendor/source-import/wickward-unified-navigation-runtime-v3-ff1/unified_navigation_v3/context.py",
+      "source_sha256": "9e1eb4977ddacb692a9e2549e0a20da5d559d7fc9840a40769868c81bc3017db",
+      "published_sha256": "9e1eb4977ddacb692a9e2549e0a20da5d559d7fc9840a40769868c81bc3017db",
+      "unchanged": true
+    },
+    {
+      "path": "engine/wickward-unified-navigation-runtime-v3-ff1/unified_navigation_v3/first_feasible.py",
+      "source_path": "vendor/source-import/wickward-unified-navigation-runtime-v3-ff1/unified_navigation_v3/first_feasible.py",
+      "source_sha256": "12f0df8e2ef9be155e2a6024fdd2e1b25f46e6917f345d68e7d4aa6d3398bbcb",
+      "published_sha256": "12f0df8e2ef9be155e2a6024fdd2e1b25f46e6917f345d68e7d4aa6d3398bbcb",
+      "unchanged": true
+    },
+    {
+      "path": "engine/wickward-unified-navigation-runtime-v3-ff1/unified_navigation_v3/boundary.py",
+      "source_path": "vendor/source-import/wickward-unified-navigation-runtime-v3-ff1/unified_navigation_v3/boundary.py",
+      "source_sha256": "622ba9b2475f068013bd3096c9ad4ece70c75b1825eb39bb2136fcb44e02ae26",
+      "published_sha256": "622ba9b2475f068013bd3096c9ad4ece70c75b1825eb39bb2136fcb44e02ae26",
+      "unchanged": true
+    },
+    {
+      "path": "engine/wickward-unified-navigation-runtime-v3-ff1/unified_navigation_v3/api.py",
+      "source_path": "vendor/source-import/wickward-unified-navigation-runtime-v3-ff1/unified_navigation_v3/api.py",
+      "source_sha256": "1e8601835f100af2ef78272f50f16ac5deec1775d6ab44e067e984a911dee5ba",
+      "published_sha256": "1e8601835f100af2ef78272f50f16ac5deec1775d6ab44e067e984a911dee5ba",
+      "unchanged": true
+    },
+    {
+      "path": "engine/wickward-unified-navigation-runtime-v3-ff1/unified_navigation_v3/__init__.py",
+      "source_path": "vendor/source-import/wickward-unified-navigation-runtime-v3-ff1/unified_navigation_v3/__init__.py",
+      "source_sha256": "21a080e40ba840776c0724a041b2cb827dad7c0d56aa25d548267ffe763b5535",
+      "published_sha256": "21a080e40ba840776c0724a041b2cb827dad7c0d56aa25d548267ffe763b5535",
+      "unchanged": true
+    },
+    {
+      "path": "engine/wickward-unified-navigation-runtime-v3-ff1/unified_navigation_v3/__main__.py",
+      "source_path": "vendor/source-import/wickward-unified-navigation-runtime-v3-ff1/unified_navigation_v3/__main__.py",
+      "source_sha256": "576c6833e494c4be07e5c6c408c2aeb45361e68d02ad7f5d509cf4514a453ece",
+      "published_sha256": "576c6833e494c4be07e5c6c408c2aeb45361e68d02ad7f5d509cf4514a453ece",
+      "unchanged": true
+    },
+    {
+      "path": "engine/wickward-unified-navigation-runtime-v3-ff1/unified_navigation_v3/VENDORED_SOURCES.json",
+      "source_path": "vendor/source-import/wickward-unified-navigation-runtime-v3-ff1/unified_navigation_v3/VENDORED_SOURCES.json",
+      "source_sha256": "85eedd3d69d823bd5ab88b39061f71f18dade1fda91006626d9a8ae27883253e",
+      "published_sha256": "85eedd3d69d823bd5ab88b39061f71f18dade1fda91006626d9a8ae27883253e",
+      "unchanged": true
+    },
+    {
+      "path": "engine/wickward-unified-navigation-runtime-v3-ff1/unified_navigation_v3/kernel.py",
+      "source_path": "vendor/source-import/wickward-unified-navigation-runtime-v3-ff1/unified_navigation_v3/kernel.py",
+      "source_sha256": "7eb1dc87baff6465ec41171f56335e7a6033b7b292defa7407a10de609b90ca8",
+      "published_sha256": "7eb1dc87baff6465ec41171f56335e7a6033b7b292defa7407a10de609b90ca8",
+      "unchanged": true
+    },
+    {
+      "path": "engine/wickward-unified-navigation-runtime-v3-ff1/unified_navigation_v3/_vendor/integration_partial_recovery_v1/partial_recovery.py",
+      "source_path": "vendor/source-import/wickward-unified-navigation-runtime-v3-ff1/unified_navigation_v3/_vendor/integration_partial_recovery_v1/partial_recovery.py",
+      "source_sha256": "76fee47e7d72cb7eff00cc7b5b7c651c8a5cd24b38d199f5ad0785ebfa5105b7",
+      "published_sha256": "76fee47e7d72cb7eff00cc7b5b7c651c8a5cd24b38d199f5ad0785ebfa5105b7",
+      "unchanged": true
+    },
+    {
+      "path": "engine/wickward-unified-navigation-runtime-v3-ff1/unified_navigation_v3/_vendor/generic_io/recommendations.py",
+      "source_path": "vendor/source-import/wickward-unified-navigation-runtime-v3-ff1/unified_navigation_v3/_vendor/generic_io/recommendations.py",
+      "source_sha256": "b15a7ce6dc3a97f4ebf2b095d282b7cc825be34347c0a09f28be133ad5b1d82b",
+      "published_sha256": "b15a7ce6dc3a97f4ebf2b095d282b7cc825be34347c0a09f28be133ad5b1d82b",
+      "unchanged": true
+    },
+    {
+      "path": "engine/wickward-unified-navigation-runtime-v3-ff1/unified_navigation_v3/_vendor/generic_io/adapter.py",
+      "source_path": "vendor/source-import/wickward-unified-navigation-runtime-v3-ff1/unified_navigation_v3/_vendor/generic_io/adapter.py",
+      "source_sha256": "8187e56489d5e1d5e746bcd0fd10472450cef291da75d0d686e2a9814ba7f8e1",
+      "published_sha256": "8187e56489d5e1d5e746bcd0fd10472450cef291da75d0d686e2a9814ba7f8e1",
+      "unchanged": true
+    },
+    {
+      "path": "engine/wickward-unified-navigation-runtime-v3-ff1/unified_navigation_v3/_vendor/generic_io/__init__.py",
+      "source_path": "vendor/source-import/wickward-unified-navigation-runtime-v3-ff1/unified_navigation_v3/_vendor/generic_io/__init__.py",
+      "source_sha256": "5c419cf9c0f9ce356f1543a55015813284072e156b0f0622f998d71b60972466",
+      "published_sha256": "5c419cf9c0f9ce356f1543a55015813284072e156b0f0622f998d71b60972466",
+      "unchanged": true
+    },
+    {
+      "path": "engine/wickward-unified-navigation-runtime-v3-ff1/unified_navigation_v3/_vendor/integration_round1/common_bridge.py",
+      "source_path": "vendor/source-import/wickward-unified-navigation-runtime-v3-ff1/unified_navigation_v3/_vendor/integration_round1/common_bridge.py",
+      "source_sha256": "5c6de7edcc68c78008ada85af57fc4c8b8bc7db1591c6b4c1f2e54e2e528fe72",
+      "published_sha256": "5c6de7edcc68c78008ada85af57fc4c8b8bc7db1591c6b4c1f2e54e2e528fe72",
+      "unchanged": true
+    },
+    {
+      "path": "engine/wickward-unified-navigation-runtime-v3-ff1/unified_navigation_v3/_vendor/strict_input_v1/validation.py",
+      "source_path": "vendor/source-import/wickward-unified-navigation-runtime-v3-ff1/unified_navigation_v3/_vendor/strict_input_v1/validation.py",
+      "source_sha256": "0bc26e74d2f7b12a14e6b8e21c08a7a1d59afe7896896605f6ea33492e9660c4",
+      "published_sha256": "0bc26e74d2f7b12a14e6b8e21c08a7a1d59afe7896896605f6ea33492e9660c4",
+      "unchanged": true
+    },
+    {
+      "path": "engine/wickward-unified-navigation-runtime-v3-ff1/unified_navigation_v3/_vendor/strict_input_v1/source_lock.json",
+      "source_path": "vendor/source-import/wickward-unified-navigation-runtime-v3-ff1/unified_navigation_v3/_vendor/strict_input_v1/source_lock.json",
+      "source_sha256": "544d9f878a64d81e51db22672f2a42ef0b8c1c21e64c79bd23d892db78dac506",
+      "published_sha256": "544d9f878a64d81e51db22672f2a42ef0b8c1c21e64c79bd23d892db78dac506",
+      "unchanged": true
+    },
+    {
+      "path": "engine/wickward-unified-navigation-runtime-v3-ff1/unified_navigation_v3/_vendor/strict_input_v1/RESOURCE_PROTOCOL.txt",
+      "source_path": "vendor/source-import/wickward-unified-navigation-runtime-v3-ff1/unified_navigation_v3/_vendor/strict_input_v1/RESOURCE_PROTOCOL.txt",
+      "source_sha256": "975be9f364657f6b4f35093b83f5c397b1317a6cfb386201c753cf2178a80905",
+      "published_sha256": "975be9f364657f6b4f35093b83f5c397b1317a6cfb386201c753cf2178a80905",
+      "unchanged": true
+    },
+    {
+      "path": "engine/wickward-unified-navigation-runtime-v3-ff1/unified_navigation_v3/_vendor/strict_input_v1/CONTRACT_PROPOSAL.txt",
+      "source_path": "vendor/source-import/wickward-unified-navigation-runtime-v3-ff1/unified_navigation_v3/_vendor/strict_input_v1/CONTRACT_PROPOSAL.txt",
+      "source_sha256": "6b4299e587a921eee97d2e3223e999da7fb165435daf72a1b0781c641b1a9799",
+      "published_sha256": "6b4299e587a921eee97d2e3223e999da7fb165435daf72a1b0781c641b1a9799",
+      "unchanged": true
+    },
+    {
+      "path": "engine/wickward-unified-navigation-runtime-v3-ff1/unified_navigation_v3/_vendor/strict_input_v1/schema.json",
+      "source_path": "vendor/source-import/wickward-unified-navigation-runtime-v3-ff1/unified_navigation_v3/_vendor/strict_input_v1/schema.json",
+      "source_sha256": "21fee55ffc166ba10cb9d59a6d4e3e68db109749002e5f052482b771f50672e4",
+      "published_sha256": "21fee55ffc166ba10cb9d59a6d4e3e68db109749002e5f052482b771f50672e4",
+      "unchanged": true
+    },
+    {
+      "path": "engine/wickward-unified-navigation-runtime-v3-ff1/unified_navigation_v3/_vendor/strict_input_v1/CLI_PROTOCOL.txt",
+      "source_path": "vendor/source-import/wickward-unified-navigation-runtime-v3-ff1/unified_navigation_v3/_vendor/strict_input_v1/CLI_PROTOCOL.txt",
+      "source_sha256": "f5aeedeb28625893427fbd66d09a966677bd32446f4c2ad61a8eef93215888c1",
+      "published_sha256": "f5aeedeb28625893427fbd66d09a966677bd32446f4c2ad61a8eef93215888c1",
+      "unchanged": true
+    },
+    {
+      "path": "engine/wickward-unified-navigation-runtime-v3-ff1/unified_navigation_v3/_vendor/original_revision5/wickward-next-ride-prototype/wickward/engine.py",
+      "source_path": "vendor/source-import/wickward-unified-navigation-runtime-v3-ff1/unified_navigation_v3/_vendor/original_revision5/wickward-next-ride-prototype/wickward/engine.py",
+      "source_sha256": "8868c004a67fc57da51044590d0b71958ab5f012fbf1581fe86cd0394a96d613",
+      "published_sha256": "8868c004a67fc57da51044590d0b71958ab5f012fbf1581fe86cd0394a96d613",
+      "unchanged": true
+    },
+    {
+      "path": "engine/wickward-unified-navigation-runtime-v3-ff1/unified_navigation_v3/_vendor/data/prior/facility_crosswalk.json",
+      "source_path": "vendor/source-import/wickward-unified-navigation-runtime-v3-ff1/unified_navigation_v3/_vendor/data/prior/facility_crosswalk.json",
+      "source_sha256": "55dc956e0a16a8a177ce531b5e8695ca6d0076400b299c173273f2d40280dcb1",
+      "published_sha256": "55dc956e0a16a8a177ce531b5e8695ca6d0076400b299c173273f2d40280dcb1",
+      "unchanged": true
+    },
+    {
+      "path": "engine/wickward-preplan-handoff-v1/_vendor/engine_api/route_problem.py",
+      "source_path": "vendor/source-import/wickward-preplan-handoff-v1/_vendor/engine_api/route_problem.py",
+      "source_sha256": "30ede1819e82b303c0f562b4ef15c8831cddeee804538190b48983a0d1f80a8c",
+      "published_sha256": "30ede1819e82b303c0f562b4ef15c8831cddeee804538190b48983a0d1f80a8c",
+      "unchanged": true
+    },
+    {
+      "path": "engine/wickward-preplan-handoff-v1/_vendor/engine_api/plan_common.py",
+      "source_path": "vendor/source-import/wickward-preplan-handoff-v1/_vendor/engine_api/plan_common.py",
+      "source_sha256": "e6557f2e9cc7f0d57840d1f8c7665c2d4b9e9ed74b0d061bee3c5f44f7621273",
+      "published_sha256": "e6557f2e9cc7f0d57840d1f8c7665c2d4b9e9ed74b0d061bee3c5f44f7621273",
+      "unchanged": true
+    },
+    {
+      "path": "engine/wickward-preplan-handoff-v1/_vendor/scripts/route_search.py",
+      "source_path": "vendor/source-import/wickward-preplan-handoff-v1/_vendor/scripts/route_search.py",
+      "source_sha256": "5de0875252aa6859929b1bbf069b67a9fe2a26218c1d0bb216bae25af1310901",
+      "published_sha256": "5de0875252aa6859929b1bbf069b67a9fe2a26218c1d0bb216bae25af1310901",
+      "unchanged": true
+    }
+  ]
+}

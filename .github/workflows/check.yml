@@ -1,0 +1,15 @@
+name: Check portfolio
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m unittest discover -s tests -v
+      - run: python -m unittest discover -s engine/wickward-preplan-duration-input-v1 -p 'test_*.py' -v
+      - run: python demo.py

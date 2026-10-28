@@ -1,0 +1,441 @@
+{
+  "cli_max_container_nesting": 13,
+  "cli_max_input_bytes": 16777216,
+  "commitment_kind_disallowed": {
+    "appointment": [
+      "entry_start",
+      "entry_end"
+    ],
+    "dpa": [
+      "start_at"
+    ],
+    "meal": [
+      "entry_start",
+      "entry_end"
+    ]
+  },
+  "contract_version": "wickward.strict-input.v1",
+  "display_only_fields": [
+    "attraction.name",
+    "location.identity_source"
+  ],
+  "models": {
+    "attraction": {
+      "fallback_wait_minutes": {
+        "maximum": 2160,
+        "minimum": 0,
+        "nullable": true,
+        "type": "number"
+      },
+      "fallback_wait_source": {
+        "paired_value": "fallback_wait_minutes",
+        "type": "paired_source"
+      },
+      "id": {
+        "type": "id"
+      },
+      "location_id": {
+        "type": "id"
+      },
+      "name": {
+        "type": "string"
+      },
+      "opens_at": {
+        "nullable": true,
+        "type": "timestamp"
+      },
+      "queue_closes_at": {
+        "nullable": true,
+        "type": "timestamp"
+      },
+      "ride_finishes_by": {
+        "nullable": true,
+        "type": "timestamp"
+      },
+      "ride_minutes": {
+        "maximum": 2160,
+        "minimum": 0.01,
+        "nullable": false,
+        "type": "number"
+      },
+      "utility": {
+        "maximum": 1000000.0,
+        "minimum": 0,
+        "nullable": true,
+        "type": "number"
+      },
+      "utility_source": {
+        "paired_value": "utility",
+        "type": "paired_source"
+      }
+    },
+    "commitment": {
+      "arrival_buffer_minutes": {
+        "maximum": 2160,
+        "minimum": 0,
+        "nullable": false,
+        "type": "number"
+      },
+      "attraction_id": {
+        "nullable": true,
+        "type": "id"
+      },
+      "completed": {
+        "type": "boolean"
+      },
+      "duration_minutes": {
+        "maximum": 2160,
+        "minimum": 0.01,
+        "nullable": false,
+        "type": "number"
+      },
+      "entry_end": {
+        "type": "timestamp"
+      },
+      "entry_start": {
+        "type": "timestamp"
+      },
+      "finish_by": {
+        "nullable": true,
+        "type": "timestamp"
+      },
+      "id": {
+        "type": "id"
+      },
+      "kind": {
+        "type": "enum",
+        "values": [
+          "dpa",
+          "meal",
+          "appointment"
+        ]
+      },
+      "location_id": {
+        "type": "id"
+      },
+      "start_at": {
+        "type": "timestamp"
+      }
+    },
+    "flexible_break": {
+      "completed": {
+        "type": "boolean"
+      },
+      "duration_minutes": {
+        "maximum": 2160,
+        "minimum": 0.01,
+        "nullable": false,
+        "type": "number"
+      },
+      "earliest_start": {
+        "type": "timestamp"
+      },
+      "finish_by": {
+        "nullable": true,
+        "type": "timestamp"
+      },
+      "id": {
+        "type": "id"
+      },
+      "kind": {
+        "type": "enum",
+        "values": [
+          "flexible_break"
+        ]
+      },
+      "latest_start": {
+        "type": "timestamp"
+      },
+      "location_id": {
+        "nullable": true,
+        "type": "id"
+      }
+    },
+    "forecast": {
+      "attraction_id": {
+        "type": "label"
+      },
+      "issued_at": {
+        "type": "timestamp"
+      },
+      "scenario_id": {
+        "type": "label"
+      },
+      "source": {
+        "type": "label"
+      },
+      "valid_from": {
+        "type": "timestamp"
+      },
+      "valid_until": {
+        "type": "timestamp"
+      },
+      "wait_minutes": {
+        "maximum": 2160,
+        "minimum": 0,
+        "nullable": false,
+        "type": "number"
+      }
+    },
+    "location": {
+      "id": {
+        "type": "id"
+      },
+      "identity_source": {
+        "type": "string"
+      },
+      "identity_verified": {
+        "type": "boolean"
+      }
+    },
+    "observation": {
+      "attraction_id": {
+        "type": "label"
+      },
+      "changed_at": {
+        "nullable": true,
+        "type": "timestamp"
+      },
+      "fetched_at": {
+        "type": "timestamp"
+      },
+      "observed_at": {
+        "nullable": true,
+        "type": "timestamp"
+      },
+      "source": {
+        "type": "label"
+      },
+      "status": {
+        "type": "enum",
+        "values": [
+          "open",
+          "closed",
+          "down",
+          "unknown"
+        ]
+      },
+      "wait_minutes": {
+        "maximum": 2160,
+        "minimum": 0,
+        "nullable": true,
+        "type": "number"
+      }
+    },
+    "policy": {
+      "boarding_buffer_minutes": {
+        "maximum": 2160,
+        "minimum": 0,
+        "nullable": false,
+        "type": "number"
+      },
+      "exit_buffer_minutes": {
+        "maximum": 2160,
+        "minimum": 0,
+        "nullable": false,
+        "type": "number"
+      },
+      "freshness_minutes": {
+        "maximum": 2160,
+        "minimum": 0.01,
+        "nullable": false,
+        "type": "number"
+      },
+      "max_schedule_states": {
+        "maximum": 250000,
+        "minimum": 1,
+        "type": "integer"
+      },
+      "queue_admission_buffer_minutes": {
+        "maximum": 2160,
+        "minimum": 0,
+        "nullable": false,
+        "type": "number"
+      },
+      "unknown_utility_fallback": {
+        "maximum": 1000000.0,
+        "minimum": 0,
+        "nullable": true,
+        "type": "number"
+      },
+      "wait_buffer_minutes": {
+        "maximum": 2160,
+        "minimum": 0,
+        "nullable": false,
+        "type": "number"
+      },
+      "wait_buffer_per_future_minute": {
+        "maximum": 10,
+        "minimum": 0,
+        "nullable": false,
+        "type": "number"
+      }
+    },
+    "request": {
+      "action_state": {
+        "type": "enum",
+        "values": [
+          "idle",
+          "in_queue",
+          "riding"
+        ]
+      },
+      "attractions": {
+        "model": "attraction",
+        "type": "rows"
+      },
+      "commitments": {
+        "model": "commitment",
+        "type": "rows"
+      },
+      "current_location_id": {
+        "type": "id"
+      },
+      "exit_deadline": {
+        "type": "timestamp"
+      },
+      "exit_location_id": {
+        "type": "id"
+      },
+      "flexible_breaks": {
+        "model": "flexible_break",
+        "type": "rows"
+      },
+      "forecasts": {
+        "model": "forecast",
+        "type": "rows"
+      },
+      "information_as_of": {
+        "type": "timestamp"
+      },
+      "legacy_non_preemptive_rests": {
+        "type": "empty_array"
+      },
+      "locations": {
+        "model": "location",
+        "type": "rows"
+      },
+      "must_ride_ids": {
+        "type": "ids"
+      },
+      "now": {
+        "type": "timestamp"
+      },
+      "observations": {
+        "model": "observation",
+        "type": "rows"
+      },
+      "park_timezone": {
+        "type": "string"
+      },
+      "policy": {
+        "model": "policy",
+        "type": "object"
+      },
+      "provenance": {
+        "type": "provenance"
+      },
+      "schema_version": {
+        "type": "enum",
+        "values": [
+          "wickward.generic-input.v1"
+        ]
+      },
+      "visited_attraction_ids": {
+        "type": "ids"
+      },
+      "walking_edges": {
+        "model": "walking_edge",
+        "type": "rows"
+      },
+      "walking_time_multiplier": {
+        "maximum": 10,
+        "minimum": 0.1,
+        "nullable": false,
+        "type": "number"
+      }
+    },
+    "sequence_action": {
+      "id": {
+        "type": "string"
+      },
+      "kind": {
+        "type": "enum",
+        "values": [
+          "ride",
+          "commitment",
+          "flexible_break"
+        ]
+      }
+    },
+    "sequence_wait": {
+      "kind": {
+        "type": "enum",
+        "values": [
+          "wait_until"
+        ]
+      },
+      "until": {
+        "type": "timestamp"
+      }
+    },
+    "walking_edge": {
+      "from": {
+        "type": "id"
+      },
+      "minutes": {
+        "maximum": 2160,
+        "minimum": 0.01,
+        "nullable": false,
+        "type": "number"
+      },
+      "quality": {
+        "type": "enum",
+        "values": [
+          "verified",
+          "estimate"
+        ]
+      },
+      "source": {
+        "type": "label"
+      },
+      "to": {
+        "type": "id"
+      }
+    }
+  },
+  "reserved_provenance_ids": [
+    "completed_commitment_ids",
+    "missed_commitment_ids",
+    "all_reserved_attraction_ids"
+  ],
+  "serialization_max_bytes": 16777216,
+  "shape_limits": "Unchanged bounded-recommendation JSON shape limits, also applied to strict evaluator; JSON serializable only.",
+  "validation_semantics": "Closed keys and provided values checked before filtering; missing required fields and relational/operational checks delegated unchanged. Only provenance is extensible; three named existing ledger arrays remain operational in bridge/partial API.",
+  "wrapper_options": {
+    "evaluate_sequence": {
+      "complete_remaining": {
+        "type": "boolean"
+      },
+      "forecast_provider": {
+        "type": "external_provider"
+      }
+    },
+    "recommend": {
+      "wall_time_budget_seconds": {
+        "maximum": 3,
+        "minimum": 0.001,
+        "nullable": false,
+        "type": "number"
+      }
+    },
+    "recommend_required_recovery": {
+      "wall_time_budget_seconds": {
+        "maximum": 3,
+        "minimum": 0.001,
+        "nullable": false,
+        "type": "number"
+      }
+    }
+  }
+}

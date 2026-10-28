@@ -1,0 +1,13 @@
+Strict v1 resource addendum, independent audit recommendation
+
+Resource safety is part of the new strict boundary, never a timing/utility rule.
+Python API validation limits serialized JSON to 16 MiB of UTF-8. Streaming
+JSONEncoder.iterencode counts bytes without creating a full serialized copy.
+The original bounded shape traversal runs first (100,000 nodes, nesting12,
+2,000,000 total string characters and 16,384 characters per string).
+The CLI reads at most 16 MiB + 1 byte, rejecting oversized files. Before JSON
+parsing a string-aware scan rejects more than 13 nested container delimiters;
+then the authoritative depth12 shape validator runs. This avoids depending on
+an unusually high process recursion limit. Duplicate keys and nonfinite JSON
+remain errors. Source labels, request objects and result values are unchanged.
+All wrapper validation time is additional to the inner engine budget.

@@ -1,0 +1,132 @@
+Strict input contract v1: proposal for review (no implementation yet)
+
+Scope
+An additive, opt-in strict_input_v1 package. No frozen file or output is edited.
+The existing request schema_version remains wickward.generic-input.v1.
+Validation rejects unsupported keys and wrong JSON types before any filtering,
+including future observations/forecasts, completed anchors/breaks, visited rides,
+and action_state locked early returns. No maximum-wait cap is implemented.
+No fields are stripped, renamed, default-filled, coerced, or migrated to metadata.
+
+Frozen closed key table
+request:
+ schema_version, information_as_of, now, exit_deadline, park_timezone,
+ locations, current_location_id, exit_location_id, walking_edges,
+ walking_time_multiplier, attractions, observations, visited_attraction_ids,
+ must_ride_ids, action_state, commitments, policy, flexible_breaks, forecasts,
+ legacy_non_preemptive_rests, provenance
+location: id, identity_verified, identity_source
+attraction: id, name, location_id, ride_minutes, utility, utility_source,
+ fallback_wait_minutes, fallback_wait_source, opens_at, queue_closes_at,
+ ride_finishes_by
+observation: attraction_id, status, wait_minutes, source, fetched_at,
+ observed_at, changed_at
+walking edge: from, to, minutes, quality, source
+forecast: attraction_id, issued_at, valid_from, valid_until, wait_minutes,
+ source, scenario_id
+fixed commitment: id, kind, location_id, completed, duration_minutes,
+ arrival_buffer_minutes, attraction_id, finish_by; plus start_at for meal or
+ appointment; plus entry_start and entry_end for dpa
+flexible break: id, kind, completed, location_id, earliest_start, latest_start,
+ duration_minutes, finish_by
+policy: max_schedule_states, freshness_minutes, exit_buffer_minutes,
+ wait_buffer_minutes, wait_buffer_per_future_minute, boarding_buffer_minutes,
+ queue_admission_buffer_minutes, unknown_utility_fallback
+sequence object: kind,id for ride/commitment/flexible_break; kind,until for
+ wait_until. String ride IDs remain accepted. Entire sequence prevalidated even
+ if an earlier step or action_state would otherwise cause an early return.
+
+Types and value behavior
+Existing numeric ranges, string/ID rules, timestamp requirements and enums are
+retained. Numeric fields reject booleans, nonfinite numbers, strings and objects.
+Nullable fields retain null exactly: attraction utility/fallback_wait_minutes/
+opens_at/queue_closes_at/ride_finishes_by; observation wait_minutes/observed_at/
+changed_at; fixed commitment attraction_id/finish_by; flexible break location_id/
+finish_by; policy unknown_utility_fallback. Sources are strings; explicit optional
+source null is retained only when its paired nullable value is absent or null,
+as already accepted by the engine. identity_source is a string when present.
+identity_verified and completed require JSON booleans (false remains false).
+ID arrays require strings. Collection fields require arrays of objects.
+legacy_non_preemptive_rests remains empty-array-only. Observations status=open,
+wait_minutes=null remains open with unknown standby wait, including linked DPA.
+Provided supported fields are type-checked regardless of state. Required-field,
+referential and scheduling validations remain delegated to frozen code; sparse
+completed records therefore keep their established acceptance. For a supplied
+kind, irrelevant fixed-commitment timing fields are rejected rather than ignored.
+
+Metadata boundary
+Only top-level provenance is an extensible JSON object. Existing descriptive
+source fields above stay intact; arbitrary source objects are not silently
+accepted. Existing provenance values may be arbitrary finite JSON values under
+the existing bounded JSON shape (100,000 nodes, depth 12, etc.). Metadata does
+not add scheduling constraints; moving maximum_wait_minutes to provenance is
+not an implementation of such a cap and will never be suggested as one.
+Important inherited exception: provenance.completed_commitment_ids,
+missed_commitment_ids, and all_reserved_attraction_ids are existing bridge ledger
+fields, not inert metadata. They remain reserved operational ledger names;
+when present each must be an array of string IDs. Partial recovery still runs
+the exact frozen bridge's canonical-ID and ledger consistency checks.
+No new operational provenance fields are introduced.
+
+Proposed Python interface
+validate_request_keys(request) -> None (pure, checks closed keys + present types)
+validate_sequence_keys(sequence) -> None (pure)
+recommend(request, *, wall_time_budget_seconds=0.8, **unsupported_options)
+evaluate_sequence(request, sequence, *, complete_remaining=True,
+                  forecast_provider=None, **unsupported_options)
+recommend_required_recovery(request, *, wall_time_budget_seconds=0.8,
+                            **unsupported_options)
+The wrappers accept request dictionaries, never prebuilt contexts (the original
+request would otherwise be unavailable for strict validation). Each invokes its
+unchanged existing entrypoint after validation. Unknown wrapper options and
+invalid budget/complete_remaining types raise the same generic_io.InputError.
+No preday optimizer wrapper or rerun is included: preday request compatibility
+is tested via shared validation and fixed-sequence evaluation only.
+The immutable-result envelope is:
+ {schema_version: wickward.strict-input-result.v1,
+  input_contract_version: wickward.strict-input.v1,
+  operation: recommend|evaluate_sequence|recommend_required_recovery,
+  result: <unchanged frozen result>}
+Validation is outside the inherited engine's cooperative search deadline. The
+engine keeps the exact supplied budget; no hard real-time guarantee is added.
+Known input/type failures raise InputError, not tracebacks; unrelated internal
+programming failures must not be hidden by a broad exception-to-input conversion.
+
+Compatibility inventory already inspected read-only
+140 integration_round1 initial requests; 280 common_input_batch requests (prior
+engine); 2 generic examples; 6 partial recovery point states; prior common example.
+429 requests total. Genuine non-operational descriptive row field found:
+location.identity_source. Existing source, utility_source, fallback_wait_source,
+scenario_id are explicit documented source labels. Optional attraction.name is retained as display-only string: frozen original
+engine.py lines 477 and 525 explicitly consume it. No location.name or
+description extension is added. Existing provenance includes score_definition, source-and-
+receipt clock records, forecast issuance assumption and preday probe labels;
+these remain intact and fully extensible under provenance.
+
+Verification plan
+Freeze schema plus exact frozen source hashes in a lock before implementation.
+Tests cover every nested level, unsupported maximum_wait_minutes, timing/utility/
+state typos, policy/options typos, all inactive row types, malformed collections,
+false/0/null distinction, source metadata, arbitrary provenance, open/null DPA,
+input immutability, wrapper result version, and accepted raw result parity.
+Run shared validation and deterministic sequence parity across all 420 existing
+initial/shared requests, examples, six partial states and 18 synthetic fixtures.
+Run recommend and partial wrapper parity where applicable, excluding only exact
+measured runtime fields. Record wall-budget nondeterminism rather than equating
+nonmatching budget-interrupted runs. No historical optimization or new policy
+comparison is performed. Independent audit is required before integration.
+
+Protocol review additions (independent reviewer, 2026-10-05)
+No invented locations.name or other display field: absent from current contract.
+Boundary tests also cover huge integers causing math.isfinite OverflowError,
+non-string object keys, circular references and overdeep provenance. Wrapper
+end-to-end elapsed time is measured separately from the frozen inner budget.
+Previous latency results (including any 0.48-second claim) do not describe this
+strict wrapper and are not reused as a latency guarantee.
+
+Implementation authorized by parent after protocol review. Optional attraction.name
+is display-only; it supplies no utility, identity verification, or constraints.
+Frozen preday plan() is not changed: callers must explicitly call
+validate_request_keys(request) before plan(). Separate plan/handoff-envelope
+fields are not generic-input request fields. Direct calls to old APIs remain
+unchanged and do not gain this opt-in strict boundary.

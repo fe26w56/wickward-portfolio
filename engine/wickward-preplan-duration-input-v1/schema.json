@@ -1,0 +1,294 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:wickward:preplan-duration-input:v1",
+  "title": "Public duration plus explicit scenario overhead input",
+  "$comment": "Python validation is authoritative. It also enforces exact known unique IDs, upper>lower, source chronology, UTC time range, credential-free URLs, finite/bounded JSON, linked booking equality, and full source-locked v2 validity. The v2 reference must be resolved from the adjacent frozen distribution; no network is needed.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "availability_envelope",
+    "public_duration_records",
+    "overhead_assumptions"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "wickward.preplan-duration-input.v1"
+    },
+    "availability_envelope": {
+      "$ref": "../wickward-preplan-availability-v2/schema.json"
+    },
+    "public_duration_records": {
+      "type": "array",
+      "maxItems": 40,
+      "items": {
+        "$ref": "#/$defs/public_duration_record"
+      }
+    },
+    "overhead_assumptions": {
+      "type": "array",
+      "maxItems": 40,
+      "items": {
+        "$ref": "#/$defs/overhead_assumption"
+      }
+    }
+  },
+  "$defs": {
+    "public_duration_record": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "attraction_id",
+        "duration_kind",
+        "duration_nominal_minutes",
+        "duration_lower_minutes",
+        "duration_upper_minutes",
+        "source_url",
+        "source_title",
+        "source_field_label",
+        "source_text",
+        "received_at",
+        "published_at",
+        "source_sha256",
+        "source_artifact"
+      ],
+      "properties": {
+        "attraction_id": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "duration_kind": {
+          "enum": [
+            "fixed",
+            "approximate",
+            "range",
+            "variable",
+            "unpublished"
+          ]
+        },
+        "duration_nominal_minutes": {
+          "anyOf": [
+            {
+              "type": "number",
+              "minimum": 0.01,
+              "maximum": 2160
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "duration_lower_minutes": {
+          "anyOf": [
+            {
+              "type": "number",
+              "minimum": 0.01,
+              "maximum": 2160
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "duration_upper_minutes": {
+          "anyOf": [
+            {
+              "type": "number",
+              "minimum": 0.01,
+              "maximum": 2160
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "source_url": {
+          "type": "string",
+          "format": "uri",
+          "pattern": "^https://\\S+$"
+        },
+        "source_title": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "source_field_label": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "source_text": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "received_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "published_at": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "date-time"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "source_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "source_artifact": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "duration_kind": {
+                "enum": [
+                  "fixed",
+                  "approximate"
+                ]
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "duration_nominal_minutes": {
+                "type": "number",
+                "minimum": 0.01,
+                "maximum": 2160
+              },
+              "duration_lower_minutes": {
+                "type": "null"
+              },
+              "duration_upper_minutes": {
+                "type": "null"
+              },
+              "source_field_label": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "\\S"
+              },
+              "source_text": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "\\S"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "duration_kind": {
+                "const": "range"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "duration_nominal_minutes": {
+                "type": "null"
+              },
+              "duration_lower_minutes": {
+                "type": "number",
+                "minimum": 0.01,
+                "maximum": 2160
+              },
+              "duration_upper_minutes": {
+                "type": "number",
+                "minimum": 0.01,
+                "maximum": 2160
+              },
+              "source_field_label": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "\\S"
+              },
+              "source_text": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "\\S"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "duration_kind": {
+                "enum": [
+                  "variable",
+                  "unpublished"
+                ]
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "duration_nominal_minutes": {
+                "type": "null"
+              },
+              "duration_lower_minutes": {
+                "type": "null"
+              },
+              "duration_upper_minutes": {
+                "type": "null"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "overhead_assumption": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "attraction_id",
+        "overhead_minutes",
+        "scenario_id",
+        "assumption"
+      ],
+      "properties": {
+        "attraction_id": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "overhead_minutes": {
+          "anyOf": [
+            {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 2160
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "scenario_id": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "assumption": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        }
+      }
+    }
+  }
+}

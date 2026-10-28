@@ -1,0 +1,206 @@
+[
+  {
+    "index": 0,
+    "id": "g1_c1",
+    "name": "ビッグサンダーマウンテン",
+    "external_id": 160
+  },
+  {
+    "index": 1,
+    "id": "g1_c2",
+    "name": "スプラッシュマウンテン",
+    "external_id": 162
+  },
+  {
+    "index": 2,
+    "id": "g1_c3",
+    "name": "美女と野獣 魔法のものがたり",
+    "external_id": 197
+  },
+  {
+    "index": 3,
+    "id": "g1_c4",
+    "name": "プーさん ハニーハント",
+    "external_id": 174
+  },
+  {
+    "index": 4,
+    "id": "g1_c5",
+    "name": "ホーンテッドマンション",
+    "external_id": 171
+  },
+  {
+    "index": 5,
+    "id": "g1_c6",
+    "name": "ベイマックス ハッピーライド",
+    "external_id": 196
+  },
+  {
+    "index": 6,
+    "id": "g1_c7",
+    "name": "モンスターズ インク",
+    "external_id": 189
+  },
+  {
+    "index": 7,
+    "id": "g1_c8",
+    "name": "スター ツアーズ",
+    "external_id": 183
+  },
+  {
+    "index": 8,
+    "id": "g2_c1",
+    "name": "カリブの海賊",
+    "external_id": 152
+  },
+  {
+    "index": 9,
+    "id": "g2_c2",
+    "name": "ジャングルクルーズ",
+    "external_id": 153
+  },
+  {
+    "index": 10,
+    "id": "g2_c3",
+    "name": "ウエスタンリバー鉄道",
+    "external_id": 154
+  },
+  {
+    "index": 11,
+    "id": "g2_c4",
+    "name": "スイス ツリーハウス",
+    "external_id": 155
+  },
+  {
+    "index": 12,
+    "id": "g2_c5",
+    "name": "魅惑のチキルーム",
+    "external_id": 156
+  },
+  {
+    "index": 13,
+    "id": "g2_c6",
+    "name": "カントリーベア",
+    "external_id": 158
+  },
+  {
+    "index": 14,
+    "id": "g2_c7",
+    "name": "蒸気船マークトウェイン号",
+    "external_id": 159
+  },
+  {
+    "index": 15,
+    "id": "g2_c8",
+    "name": "トムソーヤ島いかだ",
+    "external_id": 161
+  },
+  {
+    "index": 16,
+    "id": "g2_c9",
+    "name": "シューティングギャラリー",
+    "external_id": 157
+  },
+  {
+    "index": 17,
+    "id": "g3_c1",
+    "name": "ビーバーブラザーズ カヌー探険",
+    "external_id": 163
+  },
+  {
+    "index": 18,
+    "id": "g3_c10",
+    "name": "アリスのティーパーティー",
+    "external_id": 173
+  },
+  {
+    "index": 19,
+    "id": "g3_c2",
+    "name": "スモールワールド",
+    "external_id": 172
+  },
+  {
+    "index": 20,
+    "id": "g3_c3",
+    "name": "ピーターパン空の旅",
+    "external_id": 164
+  },
+  {
+    "index": 21,
+    "id": "g3_c4",
+    "name": "白雪姫と七人のこびと",
+    "external_id": 165
+  },
+  {
+    "index": 22,
+    "id": "g3_c5",
+    "name": "シンデレラ フェアリーテイル ホール",
+    "external_id": 166
+  },
+  {
+    "index": 23,
+    "id": "g3_c6",
+    "name": "フィルハーマジック",
+    "external_id": 167
+  },
+  {
+    "index": 24,
+    "id": "g3_c7",
+    "name": "ピノキオの冒険旅行",
+    "external_id": 168
+  },
+  {
+    "index": 25,
+    "id": "g3_c8",
+    "name": "空飛ぶダンボ",
+    "external_id": 169
+  },
+  {
+    "index": 26,
+    "id": "g3_c9",
+    "name": "キャッスルカルーセル",
+    "external_id": 170
+  },
+  {
+    "index": 27,
+    "id": "g4_c1",
+    "name": "ロジャー カートゥーンスピン",
+    "external_id": 175
+  },
+  {
+    "index": 28,
+    "id": "g4_c2",
+    "name": "ミニーの家",
+    "external_id": 176
+  },
+  {
+    "index": 29,
+    "id": "g4_c3",
+    "name": "チップとデール ツリーハウス",
+    "external_id": 178
+  },
+  {
+    "index": 30,
+    "id": "g4_c4",
+    "name": "ガジェットのゴーコースター",
+    "external_id": 179
+  },
+  {
+    "index": 31,
+    "id": "g4_c5",
+    "name": "ドナルドのボート",
+    "external_id": 180
+  },
+  {
+    "index": 32,
+    "id": "g4_c6",
+    "name": "グーフィー ペイントプレイハウス",
+    "external_id": 181
+  },
+  {
+    "index": 33,
+    "id": "g4_c7",
+    "name": "スティッチ エンカウンター",
+    "external_id": 195
+  }
+]

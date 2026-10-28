@@ -1,0 +1,610 @@
+{
+  "schema_version": "wickward.preplan-duration-input.v1",
+  "availability_envelope": {
+    "schema_version": "wickward.preplan-availability.v2",
+    "generic_request": {
+      "schema_version": "wickward.generic-input.v1",
+      "now": "2035-04-10T09:00:00+00:00",
+      "information_as_of": "2035-04-09T23:59:59+00:00",
+      "exit_deadline": "2035-04-10T17:00:00+00:00",
+      "park_timezone": "UTC",
+      "current_location_id": "gate",
+      "exit_location_id": "gate",
+      "locations": [
+        {
+          "id": "gate",
+          "identity_verified": true,
+          "identity_source": "fictional demo location"
+        },
+        {
+          "id": "sky",
+          "identity_verified": true,
+          "identity_source": "fictional demo location"
+        },
+        {
+          "id": "river",
+          "identity_verified": true,
+          "identity_source": "fictional demo location"
+        },
+        {
+          "id": "garden",
+          "identity_verified": true,
+          "identity_source": "fictional demo location"
+        },
+        {
+          "id": "lights",
+          "identity_verified": true,
+          "identity_source": "fictional demo location"
+        }
+      ],
+      "walking_edges": [
+        {
+          "from": "gate",
+          "to": "sky",
+          "minutes": 6,
+          "quality": "estimate",
+          "source": "synthetic walking assumption"
+        },
+        {
+          "from": "gate",
+          "to": "river",
+          "minutes": 8,
+          "quality": "estimate",
+          "source": "synthetic walking assumption"
+        },
+        {
+          "from": "gate",
+          "to": "garden",
+          "minutes": 10,
+          "quality": "estimate",
+          "source": "synthetic walking assumption"
+        },
+        {
+          "from": "gate",
+          "to": "lights",
+          "minutes": 12,
+          "quality": "estimate",
+          "source": "synthetic walking assumption"
+        },
+        {
+          "from": "sky",
+          "to": "gate",
+          "minutes": 6,
+          "quality": "estimate",
+          "source": "synthetic walking assumption"
+        },
+        {
+          "from": "sky",
+          "to": "river",
+          "minutes": 6,
+          "quality": "estimate",
+          "source": "synthetic walking assumption"
+        },
+        {
+          "from": "sky",
+          "to": "garden",
+          "minutes": 8,
+          "quality": "estimate",
+          "source": "synthetic walking assumption"
+        },
+        {
+          "from": "sky",
+          "to": "lights",
+          "minutes": 10,
+          "quality": "estimate",
+          "source": "synthetic walking assumption"
+        },
+        {
+          "from": "river",
+          "to": "gate",
+          "minutes": 8,
+          "quality": "estimate",
+          "source": "synthetic walking assumption"
+        },
+        {
+          "from": "river",
+          "to": "sky",
+          "minutes": 6,
+          "quality": "estimate",
+          "source": "synthetic walking assumption"
+        },
+        {
+          "from": "river",
+          "to": "garden",
+          "minutes": 6,
+          "quality": "estimate",
+          "source": "synthetic walking assumption"
+        },
+        {
+          "from": "river",
+          "to": "lights",
+          "minutes": 8,
+          "quality": "estimate",
+          "source": "synthetic walking assumption"
+        },
+        {
+          "from": "garden",
+          "to": "gate",
+          "minutes": 10,
+          "quality": "estimate",
+          "source": "synthetic walking assumption"
+        },
+        {
+          "from": "garden",
+          "to": "sky",
+          "minutes": 8,
+          "quality": "estimate",
+          "source": "synthetic walking assumption"
+        },
+        {
+          "from": "garden",
+          "to": "river",
+          "minutes": 6,
+          "quality": "estimate",
+          "source": "synthetic walking assumption"
+        },
+        {
+          "from": "garden",
+          "to": "lights",
+          "minutes": 6,
+          "quality": "estimate",
+          "source": "synthetic walking assumption"
+        },
+        {
+          "from": "lights",
+          "to": "gate",
+          "minutes": 12,
+          "quality": "estimate",
+          "source": "synthetic walking assumption"
+        },
+        {
+          "from": "lights",
+          "to": "sky",
+          "minutes": 10,
+          "quality": "estimate",
+          "source": "synthetic walking assumption"
+        },
+        {
+          "from": "lights",
+          "to": "river",
+          "minutes": 8,
+          "quality": "estimate",
+          "source": "synthetic walking assumption"
+        },
+        {
+          "from": "lights",
+          "to": "garden",
+          "minutes": 6,
+          "quality": "estimate",
+          "source": "synthetic walking assumption"
+        }
+      ],
+      "attractions": [
+        {
+          "id": "sky",
+          "location_id": "sky",
+          "ride_minutes": 10,
+          "utility": 10,
+          "utility_source": "synthetic visitor preference"
+        },
+        {
+          "id": "river",
+          "location_id": "river",
+          "ride_minutes": 10,
+          "utility": 9,
+          "utility_source": "synthetic visitor preference"
+        },
+        {
+          "id": "garden",
+          "location_id": "garden",
+          "ride_minutes": 10,
+          "utility": 8,
+          "utility_source": "synthetic visitor preference"
+        },
+        {
+          "id": "lights",
+          "location_id": "lights",
+          "ride_minutes": 10,
+          "utility": 7,
+          "utility_source": "synthetic visitor preference"
+        }
+      ],
+      "observations": [],
+      "forecasts": [
+        {
+          "attraction_id": "sky",
+          "issued_at": "2035-04-09T23:59:59+00:00",
+          "valid_from": "2035-04-10T09:00:00+00:00",
+          "valid_until": "2035-04-10T10:00:00+00:00",
+          "wait_minutes": 11.0,
+          "source": "synthetic seven-day hourly median; not the C1 model",
+          "scenario_id": "synthetic-week-median-v1"
+        },
+        {
+          "attraction_id": "sky",
+          "issued_at": "2035-04-09T23:59:59+00:00",
+          "valid_from": "2035-04-10T10:00:00+00:00",
+          "valid_until": "2035-04-10T11:00:00+00:00",
+          "wait_minutes": 16.0,
+          "source": "synthetic seven-day hourly median; not the C1 model",
+          "scenario_id": "synthetic-week-median-v1"
+        },
+        {
+          "attraction_id": "sky",
+          "issued_at": "2035-04-09T23:59:59+00:00",
+          "valid_from": "2035-04-10T11:00:00+00:00",
+          "valid_until": "2035-04-10T12:00:00+00:00",
+          "wait_minutes": 21.0,
+          "source": "synthetic seven-day hourly median; not the C1 model",
+          "scenario_id": "synthetic-week-median-v1"
+        },
+        {
+          "attraction_id": "sky",
+          "issued_at": "2035-04-09T23:59:59+00:00",
+          "valid_from": "2035-04-10T12:00:00+00:00",
+          "valid_until": "2035-04-10T13:00:00+00:00",
+          "wait_minutes": 26.0,
+          "source": "synthetic seven-day hourly median; not the C1 model",
+          "scenario_id": "synthetic-week-median-v1"
+        },
+        {
+          "attraction_id": "sky",
+          "issued_at": "2035-04-09T23:59:59+00:00",
+          "valid_from": "2035-04-10T13:00:00+00:00",
+          "valid_until": "2035-04-10T14:00:00+00:00",
+          "wait_minutes": 31.0,
+          "source": "synthetic seven-day hourly median; not the C1 model",
+          "scenario_id": "synthetic-week-median-v1"
+        },
+        {
+          "attraction_id": "sky",
+          "issued_at": "2035-04-09T23:59:59+00:00",
+          "valid_from": "2035-04-10T14:00:00+00:00",
+          "valid_until": "2035-04-10T15:00:00+00:00",
+          "wait_minutes": 36.0,
+          "source": "synthetic seven-day hourly median; not the C1 model",
+          "scenario_id": "synthetic-week-median-v1"
+        },
+        {
+          "attraction_id": "sky",
+          "issued_at": "2035-04-09T23:59:59+00:00",
+          "valid_from": "2035-04-10T15:00:00+00:00",
+          "valid_until": "2035-04-10T16:00:00+00:00",
+          "wait_minutes": 41.0,
+          "source": "synthetic seven-day hourly median; not the C1 model",
+          "scenario_id": "synthetic-week-median-v1"
+        },
+        {
+          "attraction_id": "sky",
+          "issued_at": "2035-04-09T23:59:59+00:00",
+          "valid_from": "2035-04-10T16:00:00+00:00",
+          "valid_until": "2035-04-10T17:00:00+00:00",
+          "wait_minutes": 46.0,
+          "source": "synthetic seven-day hourly median; not the C1 model",
+          "scenario_id": "synthetic-week-median-v1"
+        },
+        {
+          "attraction_id": "river",
+          "issued_at": "2035-04-09T23:59:59+00:00",
+          "valid_from": "2035-04-10T09:00:00+00:00",
+          "valid_until": "2035-04-10T10:00:00+00:00",
+          "wait_minutes": 21.0,
+          "source": "synthetic seven-day hourly median; not the C1 model",
+          "scenario_id": "synthetic-week-median-v1"
+        },
+        {
+          "attraction_id": "river",
+          "issued_at": "2035-04-09T23:59:59+00:00",
+          "valid_from": "2035-04-10T10:00:00+00:00",
+          "valid_until": "2035-04-10T11:00:00+00:00",
+          "wait_minutes": 26.0,
+          "source": "synthetic seven-day hourly median; not the C1 model",
+          "scenario_id": "synthetic-week-median-v1"
+        },
+        {
+          "attraction_id": "river",
+          "issued_at": "2035-04-09T23:59:59+00:00",
+          "valid_from": "2035-04-10T11:00:00+00:00",
+          "valid_until": "2035-04-10T12:00:00+00:00",
+          "wait_minutes": 31.0,
+          "source": "synthetic seven-day hourly median; not the C1 model",
+          "scenario_id": "synthetic-week-median-v1"
+        },
+        {
+          "attraction_id": "river",
+          "issued_at": "2035-04-09T23:59:59+00:00",
+          "valid_from": "2035-04-10T12:00:00+00:00",
+          "valid_until": "2035-04-10T13:00:00+00:00",
+          "wait_minutes": 36.0,
+          "source": "synthetic seven-day hourly median; not the C1 model",
+          "scenario_id": "synthetic-week-median-v1"
+        },
+        {
+          "attraction_id": "river",
+          "issued_at": "2035-04-09T23:59:59+00:00",
+          "valid_from": "2035-04-10T13:00:00+00:00",
+          "valid_until": "2035-04-10T14:00:00+00:00",
+          "wait_minutes": 41.0,
+          "source": "synthetic seven-day hourly median; not the C1 model",
+          "scenario_id": "synthetic-week-median-v1"
+        },
+        {
+          "attraction_id": "river",
+          "issued_at": "2035-04-09T23:59:59+00:00",
+          "valid_from": "2035-04-10T14:00:00+00:00",
+          "valid_until": "2035-04-10T15:00:00+00:00",
+          "wait_minutes": 46.0,
+          "source": "synthetic seven-day hourly median; not the C1 model",
+          "scenario_id": "synthetic-week-median-v1"
+        },
+        {
+          "attraction_id": "river",
+          "issued_at": "2035-04-09T23:59:59+00:00",
+          "valid_from": "2035-04-10T15:00:00+00:00",
+          "valid_until": "2035-04-10T16:00:00+00:00",
+          "wait_minutes": 11.0,
+          "source": "synthetic seven-day hourly median; not the C1 model",
+          "scenario_id": "synthetic-week-median-v1"
+        },
+        {
+          "attraction_id": "river",
+          "issued_at": "2035-04-09T23:59:59+00:00",
+          "valid_from": "2035-04-10T16:00:00+00:00",
+          "valid_until": "2035-04-10T17:00:00+00:00",
+          "wait_minutes": 16.0,
+          "source": "synthetic seven-day hourly median; not the C1 model",
+          "scenario_id": "synthetic-week-median-v1"
+        },
+        {
+          "attraction_id": "garden",
+          "issued_at": "2035-04-09T23:59:59+00:00",
+          "valid_from": "2035-04-10T09:00:00+00:00",
+          "valid_until": "2035-04-10T10:00:00+00:00",
+          "wait_minutes": 31.0,
+          "source": "synthetic seven-day hourly median; not the C1 model",
+          "scenario_id": "synthetic-week-median-v1"
+        },
+        {
+          "attraction_id": "garden",
+          "issued_at": "2035-04-09T23:59:59+00:00",
+          "valid_from": "2035-04-10T10:00:00+00:00",
+          "valid_until": "2035-04-10T11:00:00+00:00",
+          "wait_minutes": 36.0,
+          "source": "synthetic seven-day hourly median; not the C1 model",
+          "scenario_id": "synthetic-week-median-v1"
+        },
+        {
+          "attraction_id": "garden",
+          "issued_at": "2035-04-09T23:59:59+00:00",
+          "valid_from": "2035-04-10T11:00:00+00:00",
+          "valid_until": "2035-04-10T12:00:00+00:00",
+          "wait_minutes": 41.0,
+          "source": "synthetic seven-day hourly median; not the C1 model",
+          "scenario_id": "synthetic-week-median-v1"
+        },
+        {
+          "attraction_id": "garden",
+          "issued_at": "2035-04-09T23:59:59+00:00",
+          "valid_from": "2035-04-10T12:00:00+00:00",
+          "valid_until": "2035-04-10T13:00:00+00:00",
+          "wait_minutes": 46.0,
+          "source": "synthetic seven-day hourly median; not the C1 model",
+          "scenario_id": "synthetic-week-median-v1"
+        },
+        {
+          "attraction_id": "garden",
+          "issued_at": "2035-04-09T23:59:59+00:00",
+          "valid_from": "2035-04-10T13:00:00+00:00",
+          "valid_until": "2035-04-10T14:00:00+00:00",
+          "wait_minutes": 11.0,
+          "source": "synthetic seven-day hourly median; not the C1 model",
+          "scenario_id": "synthetic-week-median-v1"
+        },
+        {
+          "attraction_id": "garden",
+          "issued_at": "2035-04-09T23:59:59+00:00",
+          "valid_from": "2035-04-10T14:00:00+00:00",
+          "valid_until": "2035-04-10T15:00:00+00:00",
+          "wait_minutes": 16.0,
+          "source": "synthetic seven-day hourly median; not the C1 model",
+          "scenario_id": "synthetic-week-median-v1"
+        },
+        {
+          "attraction_id": "garden",
+          "issued_at": "2035-04-09T23:59:59+00:00",
+          "valid_from": "2035-04-10T15:00:00+00:00",
+          "valid_until": "2035-04-10T16:00:00+00:00",
+          "wait_minutes": 21.0,
+          "source": "synthetic seven-day hourly median; not the C1 model",
+          "scenario_id": "synthetic-week-median-v1"
+        },
+        {
+          "attraction_id": "garden",
+          "issued_at": "2035-04-09T23:59:59+00:00",
+          "valid_from": "2035-04-10T16:00:00+00:00",
+          "valid_until": "2035-04-10T17:00:00+00:00",
+          "wait_minutes": 26.0,
+          "source": "synthetic seven-day hourly median; not the C1 model",
+          "scenario_id": "synthetic-week-median-v1"
+        },
+        {
+          "attraction_id": "lights",
+          "issued_at": "2035-04-09T23:59:59+00:00",
+          "valid_from": "2035-04-10T09:00:00+00:00",
+          "valid_until": "2035-04-10T10:00:00+00:00",
+          "wait_minutes": 41.0,
+          "source": "synthetic seven-day hourly median; not the C1 model",
+          "scenario_id": "synthetic-week-median-v1"
+        },
+        {
+          "attraction_id": "lights",
+          "issued_at": "2035-04-09T23:59:59+00:00",
+          "valid_from": "2035-04-10T10:00:00+00:00",
+          "valid_until": "2035-04-10T11:00:00+00:00",
+          "wait_minutes": 46.0,
+          "source": "synthetic seven-day hourly median; not the C1 model",
+          "scenario_id": "synthetic-week-median-v1"
+        },
+        {
+          "attraction_id": "lights",
+          "issued_at": "2035-04-09T23:59:59+00:00",
+          "valid_from": "2035-04-10T11:00:00+00:00",
+          "valid_until": "2035-04-10T12:00:00+00:00",
+          "wait_minutes": 11.0,
+          "source": "synthetic seven-day hourly median; not the C1 model",
+          "scenario_id": "synthetic-week-median-v1"
+        },
+        {
+          "attraction_id": "lights",
+          "issued_at": "2035-04-09T23:59:59+00:00",
+          "valid_from": "2035-04-10T12:00:00+00:00",
+          "valid_until": "2035-04-10T13:00:00+00:00",
+          "wait_minutes": 16.0,
+          "source": "synthetic seven-day hourly median; not the C1 model",
+          "scenario_id": "synthetic-week-median-v1"
+        },
+        {
+          "attraction_id": "lights",
+          "issued_at": "2035-04-09T23:59:59+00:00",
+          "valid_from": "2035-04-10T13:00:00+00:00",
+          "valid_until": "2035-04-10T14:00:00+00:00",
+          "wait_minutes": 21.0,
+          "source": "synthetic seven-day hourly median; not the C1 model",
+          "scenario_id": "synthetic-week-median-v1"
+        },
+        {
+          "attraction_id": "lights",
+          "issued_at": "2035-04-09T23:59:59+00:00",
+          "valid_from": "2035-04-10T14:00:00+00:00",
+          "valid_until": "2035-04-10T15:00:00+00:00",
+          "wait_minutes": 26.0,
+          "source": "synthetic seven-day hourly median; not the C1 model",
+          "scenario_id": "synthetic-week-median-v1"
+        },
+        {
+          "attraction_id": "lights",
+          "issued_at": "2035-04-09T23:59:59+00:00",
+          "valid_from": "2035-04-10T15:00:00+00:00",
+          "valid_until": "2035-04-10T16:00:00+00:00",
+          "wait_minutes": 31.0,
+          "source": "synthetic seven-day hourly median; not the C1 model",
+          "scenario_id": "synthetic-week-median-v1"
+        },
+        {
+          "attraction_id": "lights",
+          "issued_at": "2035-04-09T23:59:59+00:00",
+          "valid_from": "2035-04-10T16:00:00+00:00",
+          "valid_until": "2035-04-10T17:00:00+00:00",
+          "wait_minutes": 36.0,
+          "source": "synthetic seven-day hourly median; not the C1 model",
+          "scenario_id": "synthetic-week-median-v1"
+        }
+      ],
+      "must_ride_ids": [
+        "sky"
+      ],
+      "visited_attraction_ids": [],
+      "action_state": "idle",
+      "commitments": [],
+      "flexible_breaks": [],
+      "legacy_non_preemptive_rests": [],
+      "policy": {
+        "wait_buffer_minutes": 5,
+        "wait_buffer_per_future_minute": 0,
+        "boarding_buffer_minutes": 0,
+        "exit_buffer_minutes": 5,
+        "queue_admission_buffer_minutes": 0,
+        "freshness_minutes": 10
+      }
+    },
+    "scheduled_availability": []
+  },
+  "public_duration_records": [
+    {
+      "attraction_id": "sky",
+      "duration_kind": "fixed",
+      "duration_nominal_minutes": 10,
+      "duration_lower_minutes": null,
+      "duration_upper_minutes": null,
+      "source_url": "https://example.invalid/synthetic/sky",
+      "source_title": "Fictional demo assumption",
+      "source_field_label": "duration",
+      "source_text": "Synthetic service duration: 10 minutes",
+      "received_at": "2035-04-09T23:59:59+00:00",
+      "published_at": null,
+      "source_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+      "source_artifact": "synthetic-demo-assumption"
+    },
+    {
+      "attraction_id": "river",
+      "duration_kind": "fixed",
+      "duration_nominal_minutes": 10,
+      "duration_lower_minutes": null,
+      "duration_upper_minutes": null,
+      "source_url": "https://example.invalid/synthetic/river",
+      "source_title": "Fictional demo assumption",
+      "source_field_label": "duration",
+      "source_text": "Synthetic service duration: 10 minutes",
+      "received_at": "2035-04-09T23:59:59+00:00",
+      "published_at": null,
+      "source_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+      "source_artifact": "synthetic-demo-assumption"
+    },
+    {
+      "attraction_id": "garden",
+      "duration_kind": "fixed",
+      "duration_nominal_minutes": 10,
+      "duration_lower_minutes": null,
+      "duration_upper_minutes": null,
+      "source_url": "https://example.invalid/synthetic/garden",
+      "source_title": "Fictional demo assumption",
+      "source_field_label": "duration",
+      "source_text": "Synthetic service duration: 10 minutes",
+      "received_at": "2035-04-09T23:59:59+00:00",
+      "published_at": null,
+      "source_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+      "source_artifact": "synthetic-demo-assumption"
+    },
+    {
+      "attraction_id": "lights",
+      "duration_kind": "fixed",
+      "duration_nominal_minutes": 10,
+      "duration_lower_minutes": null,
+      "duration_upper_minutes": null,
+      "source_url": "https://example.invalid/synthetic/lights",
+      "source_title": "Fictional demo assumption",
+      "source_field_label": "duration",
+      "source_text": "Synthetic service duration: 10 minutes",
+      "received_at": "2035-04-09T23:59:59+00:00",
+      "published_at": null,
+      "source_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+      "source_artifact": "synthetic-demo-assumption"
+    }
+  ],
+  "overhead_assumptions": [
+    {
+      "attraction_id": "sky",
+      "overhead_minutes": 5,
+      "scenario_id": "synthetic-overhead5",
+      "assumption": "Synthetic five-minute boarding and exit allowance; not measured"
+    },
+    {
+      "attraction_id": "river",
+      "overhead_minutes": 5,
+      "scenario_id": "synthetic-overhead5",
+      "assumption": "Synthetic five-minute boarding and exit allowance; not measured"
+    },
+    {
+      "attraction_id": "garden",
+      "overhead_minutes": 5,
+      "scenario_id": "synthetic-overhead5",
+      "assumption": "Synthetic five-minute boarding and exit allowance; not measured"
+    },
+    {
+      "attraction_id": "lights",
+      "overhead_minutes": 5,
+      "scenario_id": "synthetic-overhead5",
+      "assumption": "Synthetic five-minute boarding and exit allowance; not measured"
+    }
+  ]
+}

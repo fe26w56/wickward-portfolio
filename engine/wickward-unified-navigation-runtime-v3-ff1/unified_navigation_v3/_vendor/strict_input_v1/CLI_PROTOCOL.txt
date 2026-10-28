@@ -1,0 +1,15 @@
+Additional parent-approved CLI entrypoint (2026-10-05)
+
+python -m strict_input_v1 --recommend INPUT.json
+python -m strict_input_v1 INPUT.json [SEQUENCE.json]
+python -m strict_input_v1 --partial INPUT.json
+
+No other modes/options are supported. INPUT and optional sequence files are read
+only. Every output is the strict versioned envelope with an unchanged inner
+result. Invalid arguments, unknown options, duplicate JSON object keys at any
+level, JSON NaN/Infinity/-Infinity, malformed JSON/UTF-8, and validation failures
+produce a concise input error on stderr and exit 2, with no traceback or result.
+JSON duplicate keys are rejected before dict construction, never last-key-wins.
+Finite JSON and serialization constraints apply to extensible provenance too.
+The old generic_io CLI remains frozen. This new CLI is the recommended strict
+entrypoint. No service, UI, live fetching, policy replay or optimization is added.
