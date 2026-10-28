@@ -1,6 +1,6 @@
 <!doctype html><html lang="ja"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>wickward — Route experiment</title><style>
-    *{box-sizing:border-box}body{margin:0;background:#f6f8f5;color:#20342c;font-family:system-ui,sans-serif}main{max-width:1060px;margin:auto;padding:35px 24px}header{border-bottom:1px solid #cad7cd;padding-bottom:20px;display:flex;justify-content:space-between;gap:20px}header strong{font-size:25px}h1{font-size:36px;line-height:1.5;letter-spacing:-1px;margin:35px 0 14px}p{line-height:1.8;color:#53695c}.grid{display:grid;grid-template-columns:1.4fr 1fr;gap:35px;margin:30px 0}h2{font-size:20px}h3{margin:0;font-size:18px}ol{padding:0;list-style:none}li{display:flex;gap:18px;border-bottom:1px solid #cfddd1;padding:22px 0}.number{font-size:23px;color:#4d8660;font-weight:600}li p{font-size:12px;overflow-wrap:anywhere}aside{background:#e9f0e9;padding:24px;border-radius:12px}details{font-size:13px}summary{cursor:pointer}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:white;padding:15px;border-radius:8px;font-size:11px}.table{overflow:auto}table{border-collapse:collapse;width:100%;background:white;font-size:13px}td,th{text-align:left;padding:12px;border-bottom:1px solid #e0e7df;white-space:nowrap}.note{font-size:13px}code{font-size:12px}a{color:#246340}@media(max-width:720px){main{padding:24px 16px}h1{font-size:27px}.grid{grid-template-columns:1fr}header{flex-direction:column}}
-    </style><main><header><strong>wickward</strong><span>合成データによる再現可能なルート実験</span></header><h1>待ち時間だけでなく、<br>帰る時刻まで含めて順路を考える。</h1><p>7日分のサンプルを時刻別に集計し、既存の計画エンジンに渡した結果です。<br>訪問希望・歩行時間・体験時間・退出期限を、同じ入力で評価します。</p><div class="grid"><section><h2>提案されたルート</h2><p class="note">2035年4月10日 09:00–17:00 UTC · 架空のパーク</p><ol><li><span class="number">01</span><div><h3>スカイ・ジャーニー</h3><p>2035-04-10T09:06:00+00:00 → 2035-04-10T09:37:00+00:00</p><details><summary>この区間の計算結果</summary><pre>{
+    *{box-sizing:border-box}body{margin:0;background:#f6f8f5;color:#20342c;font-family:system-ui,sans-serif}main{max-width:1060px;margin:auto;padding:35px 24px}header{border-bottom:1px solid #cad7cd;padding-bottom:20px;display:flex;justify-content:space-between;gap:20px}header strong{font-size:25px}h1{font-size:36px;line-height:1.5;letter-spacing:-1px;margin:35px 0 14px}p{line-height:1.8;color:#53695c}.grid{display:grid;grid-template-columns:1.4fr 1fr;gap:35px;margin:30px 0}h2{font-size:20px}h3{margin:0;font-size:18px}ol{padding:0;list-style:none}li{display:flex;gap:18px;border-bottom:1px solid #cfddd1;padding:22px 0}.number{font-size:23px;color:#4d8660;font-weight:600}li>div{min-width:0}li p{font-size:12px;overflow-wrap:anywhere}aside{background:#e9f0e9;padding:24px;border-radius:12px}details{font-size:13px}summary{cursor:pointer}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:white;padding:15px;border-radius:8px;font-size:11px}.table{overflow:auto}table{border-collapse:collapse;width:100%;background:white;font-size:13px}td,th{text-align:left;padding:12px;border-bottom:1px solid #e0e7df;white-space:nowrap}.note{font-size:13px}code{font-size:12px}a{color:#246340}@media(max-width:720px){main{padding:24px 16px}h1{font-size:27px}.grid{grid-template-columns:1fr}header{flex-direction:column}}
+    </style><main><header><strong>wickward</strong><span>合成データによる再現可能なルート実験</span></header><h1>待ち時間だけでなく、<br>帰る時刻まで含めて順路を考える。</h1><p>7日分のサンプルを時刻別に集計し、既存の計画エンジンに渡した結果です。<br>訪問希望・歩行時間・体験時間・退出期限を、同じ入力で評価します。</p><div class="grid"><section><h2>提案されたルート</h2><p class="note">2035年4月10日 18:00–翌02:00 JST · 架空のパーク（入力09:00–17:00 UTCを表示変換）</p><ol><li><span class="number">01</span><div><h3>スカイ・ジャーニー</h3><p>04/10 18:06 → 04/10 18:37 JST</p><details><summary>この区間の計算結果（原本はUTC）</summary><pre>{
   &quot;id&quot;: &quot;sky&quot;,
   &quot;kind&quot;: &quot;ride&quot;,
   &quot;location_id&quot;: &quot;sky&quot;,
@@ -47,7 +47,7 @@
       &quot;scenario_id&quot;: &quot;synthetic-week-median-v1&quot;
     }
   }
-}</pre></details></div></li><li><span class="number">02</span><div><h3>リバー・クルーズ</h3><p>2035-04-10T09:43:00+00:00 → 2035-04-10T10:24:00+00:00</p><details><summary>この区間の計算結果</summary><pre>{
+}</pre></details></div></li><li><span class="number">02</span><div><h3>リバー・クルーズ</h3><p>04/10 18:43 → 04/10 19:24 JST</p><details><summary>この区間の計算結果（原本はUTC）</summary><pre>{
   &quot;id&quot;: &quot;river&quot;,
   &quot;kind&quot;: &quot;ride&quot;,
   &quot;location_id&quot;: &quot;river&quot;,
@@ -94,7 +94,7 @@
       &quot;scenario_id&quot;: &quot;synthetic-week-median-v1&quot;
     }
   }
-}</pre></details></div></li><li><span class="number">03</span><div><h3>ガーデン・レール</h3><p>2035-04-10T10:30:00+00:00 → 2035-04-10T11:26:00+00:00</p><details><summary>この区間の計算結果</summary><pre>{
+}</pre></details></div></li><li><span class="number">03</span><div><h3>ガーデン・レール</h3><p>04/10 19:30 → 04/10 20:26 JST</p><details><summary>この区間の計算結果（原本はUTC）</summary><pre>{
   &quot;id&quot;: &quot;garden&quot;,
   &quot;kind&quot;: &quot;ride&quot;,
   &quot;location_id&quot;: &quot;garden&quot;,
@@ -141,7 +141,7 @@
       &quot;scenario_id&quot;: &quot;synthetic-week-median-v1&quot;
     }
   }
-}</pre></details></div></li><li><span class="number">04</span><div><h3>光のホール</h3><p>2035-04-10T11:32:00+00:00 → 2035-04-10T12:03:00+00:00</p><details><summary>この区間の計算結果</summary><pre>{
+}</pre></details></div></li><li><span class="number">04</span><div><h3>光のホール</h3><p>04/10 20:32 → 04/10 21:03 JST</p><details><summary>この区間の計算結果（原本はUTC）</summary><pre>{
   &quot;id&quot;: &quot;lights&quot;,
   &quot;kind&quot;: &quot;ride&quot;,
   &quot;location_id&quot;: &quot;lights&quot;,
@@ -188,7 +188,7 @@
       &quot;scenario_id&quot;: &quot;synthetic-week-median-v1&quot;
     }
   }
-}</pre></details></div></li></ol></section><aside><h2>この結果の読み方</h2><p>状態：<code>duration_scenario_plan_ready</code></p><p>入力条件のもとでの実行可能性：<strong>確認済み</strong></p><p>7日分の同じ時刻の中央値を予測値とする単純なベースラインです。既存C1予測器ではありません。</p><p>実測による予測精度・現地での有効性・大域的な最適性は未検証です。時刻や歩行時間も合成した条件です。</p><p class="note">モデル上の実行可能性と、現実での有効性を区別しています。</p></aside></div><h2>エンジンに渡した予測待ち時間（分）</h2><div class="table"><table><thead><tr><th>架空の施設</th><th>9:00</th><th>10:00</th><th>11:00</th><th>12:00</th><th>13:00</th><th>14:00</th><th>15:00</th><th>16:00</th></tr></thead><tbody><tr><th>スカイ・ジャーニー</th><td>11</td><td>16</td><td>21</td><td>26</td><td>31</td><td>36</td><td>41</td><td>46</td></tr><tr><th>リバー・クルーズ</th><td>21</td><td>26</td><td>31</td><td>36</td><td>41</td><td>46</td><td>11</td><td>16</td></tr><tr><th>ガーデン・レール</th><td>31</td><td>36</td><td>41</td><td>46</td><td>11</td><td>16</td><td>21</td><td>26</td></tr><tr><th>光のホール</th><td>41</td><td>46</td><td>11</td><td>16</td><td>21</td><td>26</td><td>31</td><td>36</td></tr></tbody></table></div><p class="note">入力224件 = 4施設 × 8時間帯 × 7日。欠損・重複・未来のデータがあれば処理を止めます。予測の誤差を測る将来の実測データは含みません。</p><details><summary>完全な計算結果を見る</summary><pre>{
+}</pre></details></div></li></ol></section><aside><h2>この結果の読み方</h2><p>状態：<code>duration_scenario_plan_ready</code></p><p>入力条件のもとでの実行可能性：<strong>確認済み</strong></p><p>7日分の同じ時刻の中央値を予測値とする単純なベースラインです。既存C1予測器ではありません。</p><p>実測による予測精度・現地での有効性・大域的な最適性は未検証です。時刻や歩行時間も合成した条件です。</p><p class="note">モデル上の実行可能性と、現実での有効性を区別しています。</p></aside></div><h2>エンジンに渡した予測待ち時間（分・列時刻はJST）</h2><div class="table"><table><thead><tr><th>架空の施設</th><th>18:00</th><th>19:00</th><th>20:00</th><th>21:00</th><th>22:00</th><th>23:00</th><th>00:00 翌日</th><th>01:00 翌日</th></tr></thead><tbody><tr><th>スカイ・ジャーニー</th><td>11</td><td>16</td><td>21</td><td>26</td><td>31</td><td>36</td><td>41</td><td>46</td></tr><tr><th>リバー・クルーズ</th><td>21</td><td>26</td><td>31</td><td>36</td><td>41</td><td>46</td><td>11</td><td>16</td></tr><tr><th>ガーデン・レール</th><td>31</td><td>36</td><td>41</td><td>46</td><td>11</td><td>16</td><td>21</td><td>26</td></tr><tr><th>光のホール</th><td>41</td><td>46</td><td>11</td><td>16</td><td>21</td><td>26</td><td>31</td><td>36</td></tr></tbody></table></div><p class="note">入力224件 = 4施設 × 8時間帯 × 7日。欠損・重複・未来のデータがあれば処理を止めます。予測の誤差を測る将来の実測データは含みません。</p><details><summary>完全な計算結果を見る（原本の時刻はUTC）</summary><pre>{
   &quot;status&quot;: &quot;duration_scenario_plan_ready&quot;,
   &quot;plan&quot;: {
     &quot;schema_version&quot;: &quot;wickward.duration-preplan.v1&quot;,
@@ -1343,7 +1343,7 @@
           &quot;id&quot;: &quot;lights&quot;
         }
       ],
-      &quot;issued_at&quot;: &quot;2026-10-28T10:16:54.574848+00:00&quot;,
+      &quot;issued_at&quot;: &quot;2026-10-28T11:51:37.081241+00:00&quot;,
       &quot;plan_information_as_of&quot;: &quot;2035-04-09T23:59:59+00:00&quot;,
       &quot;provenance&quot;: {
         &quot;producer&quot;: &quot;wickward-preplan-availability-v2&quot;,
