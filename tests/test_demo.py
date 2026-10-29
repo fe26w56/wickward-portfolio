@@ -36,5 +36,10 @@ class DemoTests(unittest.TestCase):
         rendered=demo.render(result,demo.forecast(self.rows))
         self.assertNotIn('<script>',rendered)
         self.assertIn('&lt;script&gt;',rendered)
+        result['final_validation']['steps']=[{'id':'sky','arrival_at':demo.ts(), 'planning_finish_at':demo.ts(480)}]
+        rendered=demo.render(result,demo.forecast(self.rows))
+        self.assertIn('04/10 18:00 → 04/11 02:00 JST',rendered)
+        self.assertIn('00:00 翌日',rendered)
+        self.assertIn('原本の時刻はUTC',rendered)
 
 if __name__=='__main__':unittest.main()
